@@ -4,9 +4,24 @@
 
   Once you've implemented the logic, test your code by running
 */
+// DONE
 
 function countVowels(str) {
-    // Your code here
+  // Your code here
+  vowels=['a', 'e', 'i', 'o', 'u']
+  count=0
+  str = str.toLowerCase()
+  for (let index = 0; index < str.length; index++) {
+    
+    if(vowels.includes(str[index])){
+      count=count+1
+    }
+  }
+  console.log(count);
+  
+  return count
+
 }
+countVowels('rhythm')
 
 module.exports = countVowels;

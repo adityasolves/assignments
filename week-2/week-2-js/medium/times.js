@@ -7,7 +7,18 @@ Try running it for
 Hint - use Date class exposed in JS
 There is no automated test for this one, this is more for you to understand time goes up as computation goes up
 */
+// done
 
 function calculateTime(n) {
-    return 0.01;
+    const startdate = performance.now();
+    sum=0
+    for (let index = 1; index <= n; index++) {
+        sum=sum+index;
+    }
+    const enddate = performance.now();
+    let a=(enddate-startdate)/1000;
+    console.log(a);
+    
+    return a;
 }
+calculateTime(1000000000)
